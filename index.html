@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AERO // Hypercar Architecture</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <canvas id="constellationCanvas"></canvas>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">AERO<span>.</span></a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="compare.html">Comparison</a>
+      <a href="pricing.html">Price Chart</a>
+    </nav>
+    <a href="pricing.html" class="cta-btn">Dream About</a>
+  </header>
+
+  <main>
+    <section id="hero" class="hero-section">
+      <div class="hero-content scroll-reveal">
+        <span class="badge">AERODYNAMIC PRECISION</span>
+        <h1>ENGINEERED<br><span class="gradient-text">WITHOUT LIMITS</span></h1>
+        <p>Experience the pinnacle of automotive engineering with our hypercar architecture, designed for unparalleled performance.</p>
+        <div class="hero-actions">
+          <a href="#collection" class="btn-primary">Explore Collection</a>
+          <a href="compare.html" class="btn-secondary">Compare Models</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="collection" class="collection-section">
+      <div class="section-header scroll-reveal">
+        <h2>THE HYPERCAR FLEET</h2>
+        <p>Click any model to inspect detailed dynamic telemetry and structural design.</p>
+      </div>
+
+      <div class="car-grid">
+        <div class="car-card scroll-reveal" data-car="porsche">
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=800&q=80" alt="Porsche 911 GT3 RS" />
+          </div>
+          <div class="card-info">
+            <span class="tag">ATMOSPHERIC V6</span>
+            <h3>Porsche 911 GT3 RS</h3>
+            <div class="specs-preview">
+              <div><span>Power</span><strong>525 HP</strong></div>
+              <div><span>0-100 km/h</span><strong>3.2s</strong></div>
+            </div>
+            <button class="open-modal-btn">Inspect Machine →</button>
+          </div>
+        </div>
+
+        <div class="car-card scroll-reveal" data-car="amg-one">
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=800&q=80" alt="Mercedes-AMG ONE" />
+          </div>
+          <div class="card-info">
+            <span class="tag">FORMULA 1 HYBRID</span>
+            <h3>Mercedes-AMG ONE</h3>
+            <div class="specs-preview">
+              <div><span>Power</span><strong>1,063 HP</strong></div>
+              <div><span>Top Speed</span><strong>352 km/h</strong></div>
+            </div>
+            <button class="open-modal-btn">Inspect Machine →</button>
+          </div>
+        </div>
+
+        <div class="car-card scroll-reveal" data-car="ferrari">
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80" alt="Ferrari SF90" />
+          </div>
+          <div class="card-info">
+            <span class="tag">TWIN-TURBO V8 PHEV</span>
+            <h3>Ferrari SF90</h3>
+            <div class="specs-preview">
+              <div><span>Power</span><strong>1,000 HP</strong></div>
+              <div><span>0-100 km/h</span><strong>2.5s</strong></div>
+            </div>
+            <button class="open-modal-btn">Inspect Machine →</button>
+          </div>
+        </div>
+
+        <div class="car-card scroll-reveal" data-car="valkyrie">
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Aston Martin Valkyrie" />
+          </div>
+          <div class="card-info">
+            <span class="tag">COSOWORTH V12</span>
+            <h3>Aston Martin Valkyrie</h3>
+            <div class="specs-preview">
+              <div><span>Power</span><strong>1,160 HP</strong></div>
+              <div><span>Weight</span><strong>1,030 kg</strong></div>
+            </div>
+            <button class="open-modal-btn">Inspect Machine →</button>
+          </div>
+        </div>
+
+        <div class="car-card scroll-reveal" data-car="jesko">
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1541348263662-e082662d82da?auto=format&fit=crop&w=800&q=80" alt="Koenigsegg Jesko" />
+          </div>
+          <div class="card-info">
+            <span class="tag">LST TRANSMISSION</span>
+            <h3>Koenigsegg Jesko</h3>
+            <div class="specs-preview">
+              <div><span>Power</span><strong>1,600 HP</strong></div>
+              <div><span>Top Speed</span><strong>480+ km/h</strong></div>
+            </div>
+            <button class="open-modal-btn">Inspect Machine →</button>
+          </div>
+        </div>
+
+        <div class="car-card scroll-reveal" data-car="bmw">
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80" alt="BMW M4 GT3" />
+          </div>
+          <div class="card-info">
+            <span class="tag">TWIN-TURBO I6</span>
+            <h3>BMW M4 GT3</h3>
+            <div class="specs-preview">
+              <div><span>Power</span><strong>503 HP</strong></div>
+              <div><span>0-100 km/h</span><strong>3.9s</strong></div>
+            </div>
+            <button class="open-modal-btn">Inspect Machine →</button>
+          </div>
+        </div>
+
+        <div class="car-card scroll-reveal" data-car="detomaso">
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1494905998402-395d579af36f?auto=format&fit=crop&w=800&q=80" alt="De Tomaso" />
+          </div>
+          <div class="card-info">
+            <span class="tag">MID-ENGINE V8</span>
+            <h3>De Tomaso</h3>
+            <div class="specs-preview">
+              <div><span>Power</span><strong>760 HP</strong></div>
+              <div><span>Top Speed</span><strong>320 km/h</strong></div>
+            </div>
+            <button class="open-modal-btn">Inspect Machine →</button>
+          </div>
+        </div>
+
+        <div class="car-card scroll-reveal" data-car="spania-gta">
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=800&q=80" alt="Spania GTA" />
+          </div>
+          <div class="card-info">
+            <span class="tag">TWIN-TURBO V8</span>
+            <h3>Spania GTA</h3>
+            <div class="specs-preview">
+              <div><span>Power</span><strong>880 HP</strong></div>
+              <div><span>0-100 km/h</span><strong>2.8s</strong></div>
+            </div>
+            <button class="open-modal-btn">Inspect Machine →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="carModal" class="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+      <div class="modal-body">
+        <div class="modal-image-col">
+          <img id="modalImg" src="" alt="Hypercar details" />
+        </div>
+        <div class="modal-details-col">
+          <span id="modalTag" class="badge">SPECIFICATION</span>
+          <h2 id="modalTitle">Car Title</h2>
+          <p id="modalDesc">Detailed overview of dynamic aerodynamics and monocoque engineering.</p>
+
+          <div class="telemetry-grid">
+            <div class="telemetry-item">
+              <span>Peak Power</span>
+              <h4 id="modalPower">1000 HP</h4>
+            </div>
+            <div class="telemetry-item">
+              <span>0-100 km/h</span>
+              <h4 id="modalAccel">2.5s</h4>
+            </div>
+            <div class="telemetry-item">
+              <span>Max Speed</span>
+              <h4 id="modalSpeed">350 km/h</h4>
+            </div>
+            <div class="telemetry-item">
+              <span>Downforce</span>
+              <h4 id="modalDownforce">860 kg</h4>
+            </div>
+          </div>
+
+          <a href="pricing.html" class="btn-primary full-width">View Allocation & Pricing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

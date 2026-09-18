@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AERO // Telemetry Comparison</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <canvas id="constellationCanvas"></canvas>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">AERO<span>.</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Fleet</a>
+      <a href="compare.html" class="active">Comparison</a>
+      <a href="pricing.html">Price Chart</a>
+    </nav>
+    <a href="pricing.html" class="cta-btn">Reserve</a>
+  </header>
+<main  class="page-container">
+<div class="page-header scroll-reveal">
+      <span class="badge">PERFORMANCE MATRIX</span>
+      <h1>HYPERCAR <span class="gradient-text">COMPARISON</span></h1>
+      <p>Compare key performance metrics, aerodynamic features, and structural design elements across our hypercar fleet.</p>
+    </div class="compare-selectors scroll-reveal">
+    <div class="select-box">
+        <label for="car1Select">Vehicle A</label>
+        <select id="car1Select">
+          <option value="porsche">Porsche 911 GT3 RS</option>
+          <option value="amg-one" selected>Mercedes-AMG ONE</option>
+          <option value="ferrari">Ferrari SF90</option>
+          <option value="valkyrie">Aston Martin Valkyrie</option>
+          <option value="jesko">Koenigsegg Jesko</option>
+          <option value="bmw">BMW M4 GT3</option>
+          <option value="detomaso">De Tomaso</option>
+          <option value="spania-gta">Spania GTA</option>
+        </select>
+      </div>
+
+<div class="vs-badge">VS</div>
+
+      <div class="select-box">
+        <label for="car2Select">Vehicle B</label>
+        <select id="car2Select">
+          <option value="porsche" selected>Porsche 911 GT3 RS</option>
+          <option value="amg-one">Mercedes-AMG ONE</option>
+          <option value="ferrari">Ferrari SF90</option>
+          <option value="valkyrie">Aston Martin Valkyrie</option>
+          <option value="jesko">Koenigsegg Jesko</option>
+          <option value="bmw">BMW M4 GT3</option>
+          <option value="detomaso">De Tomaso</option>
+          <option value="spania-gta">Spania GTA</option>
+        </select>
+      </div>
+    </div>
+<div class="compare-card" id="cardA">
+<div class="compare-img-box">
+    <img id="imgA" src="" alt="Vehicle A"/>
+</div>
+<h3 id="titleA">Vehicle A</h3>
+<span id="tagA" class="tag">SPECS</span>
+<div class="stat-group">
+     <div class="stat-label">Power <span><b id="powerValA">0</b> HP</span></div>
+          <div class="bar-container"><div class="bar-fill" id="powerBarA"></div></div>
+        </div>
+
+        <div class="stat-group">
+          <div class="stat-label">Top Speed <span><b id="speedValA">0</b> km/h</span></div>
+          <div class="bar-container"><div class="bar-fill" id="speedBarA"></div></div>
+        </div>
+
+        <div class="stat-group">
+          <div class="stat-label">Downforce @ 250km/h <span><b id="dfValA">0</b> kg</span></div>
+          <div class="bar-container"><div class="bar-fill" id="dfBarA"></div></div>
+        </div>
+      </div>
+
+      <!-- Vehicle B -->
+      <div class="compare-card" id="cardB">
+        <div class="compare-img-box">
+          <img id="imgB" src="" alt="Vehicle B" />
+        </div>
+        <h3 id="titleB">Vehicle B</h3>
+        <span id="tagB" class="tag">SPECS</span>
+
+        <div class="stat-group">
+          <div class="stat-label">Power <span><b id="powerValB">0</b> HP</span></div>
+          <div class="bar-container"><div class="bar-fill" id="powerBarB"></div></div>
+        </div>
+
+        <div class="stat-group">
+          <div class="stat-label">Top Speed <span><b id="speedValB">0</b> km/h</span></div>
+          <div class="bar-container"><div class="bar-fill" id="speedBarB"></div></div>
+        </div>
+
+        <div class="stat-group">
+          <div class="stat-label">Downforce @ 250km/h <span><b id="dfValB">0</b> kg</span></div>
+          <div class="bar-container"><div class="bar-fill" id="dfBarB"></div></div>
+        </div>
+        </div>
+        </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
+        

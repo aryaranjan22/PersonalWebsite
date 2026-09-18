@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AERO // Valuation & Price Chart</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <canvas id="constellationCanvas"></canvas>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">AERO<span>.</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Fleet</a>
+      <a href="compare.html">Comparison</a>
+      <a href="pricing.html" class="active">Price Chart</a>
+    </nav>
+    <a href="pricing.html" class="cta-btn">Reserve</a>
+  </header>
+
+  <main class="page-container">
+    <div class="page-header scroll-reveal">
+      <span class="badge">VALUATION MATRIX</span>
+      <h1>PRICING & <span class="gradient-text">ALLOCATION</span></h1>
+      <p>Explore base MSRP, production volume, and official track pack add-on valuations.</p>
+      
+      <div class="pricing-toggle">
+        <button id="btnBase" class="toggle-btn active">Standard MSRP</button>
+        <button id="btnTrack" class="toggle-btn">With Full Aerodynamic Track Pack</button>
+      </div>
+    </div>
+
+    <div class="table-wrapper scroll-reveal">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Vehicle</th>
+            <th>Production Units</th>
+            <th>Engine / Drivetrain</th>
+            <th>Est. Price</th>
+            <th>Allocation Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="car-cell">
+              <img src="images/porsche.jpg" onerror="this.src='https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=200&q=80'" alt="Porsche" />
+              <span>Porsche 911 GT3 RS</span>
+            </td>
+            <td>Limited (Serial Track)</td>
+            <td>4.0L Atmospheric V6</td>
+            <td class="price-cell" data-base="$241,300" data-track="$315,000">$241,300</td>
+            <td><span class="status-badge available">Open Order</span></td>
+          </tr>
+
+          <tr>
+            <td class="car-cell">
+              <img src="images/amg-one.jpg" onerror="this.src='https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=200&q=80'" alt="AMG ONE" />
+              <span>Mercedes-AMG ONE</span>
+            </td>
+            <td>275 Units Worldwide</td>
+            <td>1.6L F1 Turbo Hybrid</td>
+            <td class="price-cell" data-base="$2,720,000" data-track="$3,100,000">$2,720,000</td>
+            <td><span class="status-badge sold-out">Sold Out</span></td>
+          </tr>
+
+          <tr>
+            <td class="car-cell">
+              <img src="images/ferrari.jpg" onerror="this.src='https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=200&q=80'" alt="Ferrari" />
+              <span>Ferrari SF90 Fiorano</span>
+            </td>
+            <td>Regular Series Production</td>
+            <td>4.0L Twin-Turbo V8 PHEV</td>
+            <td class="price-cell" data-base="$524,000" data-track="$610,000">$524,000</td>
+            <td><span class="status-badge available">Allocation Ready</span></td>
+          </tr>
+
+          <tr>
+            <td class="car-cell">
+              <img src="images/valkyrie.jpg" onerror="this.src='https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=200&q=80'" alt="Valkyrie" />
+              <span>Aston Martin Valkyrie</span>
+            </td>
+            <td>150 Units Worldwide</td>
+            <td>6.5L Cosworth V12</td>
+            <td class="price-cell" data-base="$3,500,000" data-track="$4,100,000">$3,500,000</td>
+            <td><span class="status-badge waitlist">Waitlist</span></td>
+          </tr>
+
+          <tr>
+            <td class="car-cell">
+              <img src="images/jesko.jpg" onerror="this.src='https://images.unsplash.com/photo-1541348263662-e082662d82da?auto=format&fit=crop&w=200&q=80'" alt="Jesko" />
+              <span>Koenigsegg Jesko</span>
+            </td>
+            <td>125 Units Worldwide</td>
+            <td>5.0L Twin-Turbo V8</td>
+            <td class="price-cell" data-base="$3,000,000" data-track="$3,450,000">$3,000,000</td>
+            <td><span class="status-badge waitlist">Waitlist</span></td>
+          </tr>
+
+          <tr>
+            <td class="car-cell">
+              <img src="images/bmw.jpg" onerror="this.src='https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=200&q=80'" alt="BMW" />
+              <span>BMW M4 GT3</span>
+            </td>
+            <td>Race Teams Only</td>
+            <td>3.0L Twin-Turbo 6</td>
+            <td class="price-cell" data-base="$530,000" data-track="$590,000">$530,000</td>
+            <td><span class="status-badge available">Available</span></td>
+          </tr>
+
+          <tr>
+            <td class="car-cell">
+              <img src="https://images.unsplash.com/photo-1494905998402-395d579af36f?auto=format&fit=crop&w=200&q=80" alt="De Tomaso" />
+              <span>De Tomaso</span>
+            </td>
+            <td>Limited Launch Edition</td>
+            <td>5.0L Naturally Aspirated V8</td>
+            <td class="price-cell" data-base="$338,000" data-track="$410,000">$338,000</td>
+            <td><span class="status-badge waitlist">Waitlist</span></td>
+          </tr>
+
+          <tr>
+            <td class="car-cell">
+              <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=200&q=80" alt="Spania GTA" />
+              <span>Spania GTA</span>
+            </td>
+            <td>Track-Focused Allocation</td>
+            <td>4.8L Twin-Turbo V8</td>
+            <td class="price-cell" data-base="$425,000" data-track="$495,000">$425,000</td>
+            <td><span class="status-badge available">Allocation Ready</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html> 
